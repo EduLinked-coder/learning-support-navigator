@@ -1,0 +1,28 @@
+{
+  "exampleId": "synthetic-public-navigation-001",
+  "synthetic": true,
+  "title": "Understanding where to ask for learning support",
+  "situation": "A learner is finding course instructions difficult to follow and wants to know what kinds of support they can ask about.",
+  "navigation": [
+    {
+      "step": 1,
+      "action": "Describe the learning task or barrier in your own words without needing a diagnosis.",
+      "why": "Support conversations can begin with what is making participation difficult."
+    },
+    {
+      "step": 2,
+      "action": "Ask the learning provider what support, adjustments, accessible formats or alternative ways to participate are available.",
+      "why": "The provider can explain its process and who is responsible for responding."
+    },
+    {
+      "step": 3,
+      "action": "Record the option you choose, what will happen next and when it will be reviewed.",
+      "why": "A clear next action makes it easier to check whether the support is helping."
+    }
+  ],
+  "boundaries": [
+    "This example is general information, not diagnosis or clinical advice.",
+    "It does not determine legal entitlement, regulatory compliance or formal assessment outcomes.",
+    "It contains no real learner, family, provider or client data."
+  ]
+}
