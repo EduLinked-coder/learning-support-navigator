@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/EduLinked-coder/learning-support-navigator/contracts/public-projection-intake.schema.json",
+  "title": "Learning Support Navigator Public Projection Intake",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "sourceRepository",
+    "sourceRevision",
+    "projectionVersion",
+    "classification",
+    "approvalEvidence",
+    "preparedAt",
+    "minimisationStatement",
+    "payload"
+  ],
+  "properties": {
+    "sourceRepository": {
+      "const": "EduLinked-coder/learning-support-navigator-private"
+    },
+    "sourceRevision": {
+      "type": "string",
+      "minLength": 7
+    },
+    "projectionVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "const": "public_approved"
+    },
+    "approvalEvidence": {
+      "type": "string",
+      "minLength": 1
+    },
+    "preparedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "minimisationStatement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "payload": {
+      "type": "object"
+    }
+  }
+}
