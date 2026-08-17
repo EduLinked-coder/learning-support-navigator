@@ -1,0 +1,60 @@
+{
+  "apiVersion": "edulinked.ai/v1",
+  "kind": "RepositoryContract",
+  "metadata": {
+    "id": "learning-support-navigator",
+    "status": "active-bootstrap",
+    "canonicality": "candidate"
+  },
+  "spec": {
+    "repository": "EduLinked-coder/learning-support-navigator",
+    "visibility": "public",
+    "purpose": "Provide independently useful public learning-navigation guidance, examples and interfaces without exposing private EduLinked company or product state.",
+    "pairedPrivateRepository": "EduLinked-coder/learning-support-navigator-private",
+    "owns": [
+      "public_learning_navigation_content",
+      "public_navigation_examples",
+      "public_accessibility_guidance",
+      "approved_public_projections"
+    ],
+    "doesNotOwn": [
+      "company_confidential_information",
+      "restricted_information",
+      "private_commercial_evidence",
+      "proprietary_methods_not_approved_for_release",
+      "diagnosis_or_clinical_determination",
+      "legal_or_regulatory_determinations",
+      "secret_values"
+    ],
+    "authority": {
+      "autonomousOperational": [
+        "validate_public_boundary",
+        "validate_projection_intake",
+        "maintain_synthetic_public_examples"
+      ],
+      "humanRequired": [
+        "approve_consequential_publication_or_disclosure",
+        "change_canonical_product_or_semantic_authority",
+        "make_legal_privacy_or_regulatory_determinations"
+      ]
+    },
+    "informationClassification": {
+      "repositoryDefault": "public",
+      "acceptedProjectionClassification": "public_approved",
+      "forbidden": [
+        "private",
+        "company_confidential",
+        "restricted"
+      ],
+      "invariant": "private_presence_does_not_imply_public_approval"
+    },
+    "accessibility": {
+      "designTarget": "WCAG 2.2",
+      "conformanceClaim": "not_established"
+    },
+    "maturity": {
+      "declaredTarget": 4,
+      "operationalEvidence": "not_yet_observed"
+    }
+  }
+}
