@@ -3,7 +3,7 @@
   "kind": "RepositoryContract",
   "metadata": {
     "id": "learning-support-navigator",
-    "status": "active-bootstrap",
+    "status": "active-post-bootstrap",
     "canonicality": "candidate"
   },
   "spec": {
