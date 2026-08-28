@@ -73,6 +73,14 @@ Preserve:
 
 `GUIDANCE != COMPETENCY_OR_RPL_DECISION`
 
+## 🧭 Bounded non-diagnostic navigation workflow
+
+The public synthetic example must prove only this narrow reusable navigation path:
+
+`BARRIER_OR_CONCERN -> BOUNDED_SUPPORT_OPTION -> RESPONSIBLE_ACTOR -> REVIEW_OR_NEXT_ACTION`
+
+The workflow stays general and public-safe. It does not decide what a real person needs, diagnose a condition, determine NCCD or legal entitlement, approve an adjustment, or claim an outcome. The responsible provider or other source-owning actor retains authority for its own process and decisions.
+
 ## 🔗 Ecosystem reuse boundary
 
 Before creating new learning/support machinery, inspect relevant existing capability such as `EduLinked-Pty-Ltd/accessible-RTO`, `EduLinked-Pty-Ltd/Pilots`, `Sarah-Ailish-McLoughlin/practera`, `Sarah-Ailish-McLoughlin/client-accessibility-ops`, and the EduLinked Pattern Library where materially relevant.
@@ -103,13 +111,17 @@ Protected human authority remains required for publication of sensitive/novel pr
 
 ## 🧪 Validation and maturity
 
-Current maturity is a bootstrap foundation: a machine-readable public boundary, projection-intake contract, synthetic navigation example and deterministic boundary validation. Operational maturity depends on retained execution evidence and real usage; it is not inferred from repository structure alone.
+Current source state is post-bootstrap. The repository contains a machine-readable public boundary, projection-intake contract, explicit bounded synthetic navigation workflow and deterministic boundary/workflow validation. These are implementation and runtime witnesses for their declared checks only.
+
+Operational maturity still depends on stronger criterion-specific evidence and attributable real use. It is not inferred from repository structure or one successful workflow run alone.
 
 `SCHEMA_VALID != FACT_TRUE`
 
 `GREEN_CI != ACCESSIBLE_IN_PRACTICE`
 
 `PUBLIC_PAGE_EXISTS != USER_OUTCOME`
+
+`SYNTHETIC_WORKFLOW != REAL_USER_OUTCOME`
 
 ## ✅ Agent completion contract
 

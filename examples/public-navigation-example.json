@@ -3,6 +3,18 @@
   "synthetic": true,
   "title": "Understanding where to ask for learning support",
   "situation": "A learner is finding course instructions difficult to follow and wants to know what kinds of support they can ask about.",
+  "workflow": {
+    "barrierOrConcern": "Course instructions are difficult to follow.",
+    "boundedSupportOptions": [
+      "Ask the learning provider whether instructions are available in a clearer or alternative format.",
+      "Ask what other supported ways to participate in the learning task are available."
+    ],
+    "responsibleActor": "learning_provider",
+    "reviewOrNextAction": "Record the option chosen, who will respond, what happens next and when the learner can review whether it is helping.",
+    "authorityClass": "general_navigation_only",
+    "personSpecificDecision": false,
+    "outcomeClaim": "not_established"
+  },
   "navigation": [
     {
       "step": 1,

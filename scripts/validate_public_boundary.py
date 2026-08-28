@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 PRIVATE_REPO = "EduLinked-coder/learning-support-navigator-private"
 PUBLIC_APPROVED = "public_approved"
 FORBIDDEN_CLASSIFICATIONS = {"private", "company_confidential", "restricted"}
+WORKFLOW_AUTHORITY = "general_navigation_only"
+WORKFLOW_OUTCOME = "not_established"
 
 
 def load_json(path: str) -> dict:
@@ -51,6 +53,28 @@ def validate_projection(obj: dict) -> list[str]:
     return errors
 
 
+def validate_navigation_workflow(example: dict) -> list[str]:
+    errors: list[str] = []
+    workflow = example.get("workflow")
+    if not isinstance(workflow, dict):
+        return ["synthetic navigation example must include a workflow object"]
+
+    for field in ("barrierOrConcern", "responsibleActor", "reviewOrNextAction"):
+        if not str(workflow.get(field, "")).strip():
+            errors.append(f"workflow.{field} is required")
+
+    options = workflow.get("boundedSupportOptions")
+    if not isinstance(options, list) or not options or any(not str(option).strip() for option in options):
+        errors.append("workflow.boundedSupportOptions must contain at least one bounded support option")
+    if workflow.get("authorityClass") != WORKFLOW_AUTHORITY:
+        errors.append("workflow authority must remain general_navigation_only")
+    if workflow.get("personSpecificDecision") is not False:
+        errors.append("synthetic workflow must not make a person-specific decision")
+    if workflow.get("outcomeClaim") != WORKFLOW_OUTCOME:
+        errors.append("synthetic workflow must keep outcome claim not_established")
+    return errors
+
+
 def main() -> int:
     repo = load_json(".repository/repo.json")
     schema = load_json("contracts/public-projection-intake.schema.json")
@@ -81,6 +105,7 @@ def main() -> int:
         errors.append("synthetic example must state that no real learner data is present")
     if "legal entitlement" not in boundaries:
         errors.append("synthetic example must not imply legal determination")
+    errors.extend(validate_navigation_workflow(example))
 
     synthetic_valid = {
         "sourceRepository": PRIVATE_REPO,
@@ -111,7 +136,7 @@ def main() -> int:
             print(f"ERROR: {error}")
         return 1
 
-    print("PASS: public/private boundary, projection intake and synthetic navigation checks")
+    print("PASS: public/private boundary, projection intake and bounded synthetic navigation workflow checks")
     return 0
 
 
