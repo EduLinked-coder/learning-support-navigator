@@ -30,6 +30,7 @@
       "autonomousOperational": [
         "validate_public_boundary",
         "validate_projection_intake",
+        "validate_approved_public_source_projection",
         "maintain_synthetic_public_examples"
       ],
       "humanRequired": [
@@ -41,6 +42,9 @@
     "informationClassification": {
       "repositoryDefault": "public",
       "acceptedProjectionClassification": "public_approved",
+      "approvedPublicSourceRepositories": [
+        "EduLinked-Pty-Ltd/accessible-RTO"
+      ],
       "forbidden": [
         "private",
         "company_confidential",
