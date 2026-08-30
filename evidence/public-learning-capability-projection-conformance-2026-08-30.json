@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0",
+  "asOf": "2026-08-30",
+  "kind": "deterministic-source-materialised-verification-receipt",
+  "capability": "PUBLIC_LEARNING_CAPABILITY_PROJECTION_CONSUMER_BINDING",
+  "repository": "EduLinked-coder/learning-support-navigator",
+  "sourceIdentity": {
+    "repositoryContract": {
+      "commit": "671fa867c9ea2ab475fe7483bdc7e3e2cf04990e",
+      "blobSha": "02d052f0928f80674d2a96aec303403411cd1fd0",
+      "path": ".repository/repo.json"
+    },
+    "projectionSchema": {
+      "commit": "935c5112fc8e7f2bb86d6ac21368a72224a063be",
+      "blobSha": "344c5f132640753073566d43b1c179da5bd703e1",
+      "path": "contracts/public-projection-intake.schema.json"
+    },
+    "learningCapabilityProjection": {
+      "commit": "747ba1e1aa343af0c1ca0b44238ee777d12aeabc",
+      "blobSha": "8a66f44656f135ebe6d22dfd6a4b0550eed61662",
+      "path": "examples/accessible-rto-learning-capability-projection.json"
+    },
+    "validator": {
+      "commit": "dcf15f9290c9e1c98fe999e4fa407e593a98a950",
+      "blobSha": "54b799a44487972eea5042808421478d86dc69d1",
+      "path": "scripts/validate_public_boundary.py"
+    },
+    "upstreamSourceRevision": "546aa84ccf621bf024db64f6922ccaa29c8914f9"
+  },
+  "execution": {
+    "mode": "LOCAL_DETERMINISTIC_SOURCE_MATERIALISED",
+    "exactSourceRefetchedBeforeFinalExecution": true,
+    "pythonCompile": "PASS",
+    "validatorResult": "PASS",
+    "positiveProjectionIntakePaths": 2,
+    "negativeFailClosedCases": 9,
+    "negativeCases": [
+      "private_classification_rejected",
+      "company_confidential_classification_rejected",
+      "restricted_classification_rejected",
+      "missing_approval_evidence_rejected",
+      "unapproved_public_source_repository_rejected",
+      "approved_public_source_without_source_path_rejected",
+      "invented_learning_system_version_rejected",
+      "source_authority_transfer_rejected",
+      "accessflow_accessibility_conformance_overclaim_rejected"
+    ],
+    "githubActionsDispatched": 0,
+    "githubActionsMinutesConsumed": 0
+  },
+  "verifiedBoundaries": [
+    "paired private projections remain accepted only through the existing paired-private route",
+    "approved public-source projections require explicit repository allowlisting",
+    "public-source projections require source revision, source path, approval evidence and minimisation statement",
+    "source authority is not transferred to the public navigator",
+    "Learning System implementation version remains UNVERIFIED",
+    "current evidenced versions are preserved for Inclusive Learning Builder, AccessFlow, EvidencePath, Universal Learning Design, Global Learning Package Portability Profile and Individual Contribution Evidence Profile",
+    "AccessFlow bounded runtime evidence does not become accessibility-conformance evidence",
+    "Universal Learning Design source-audit execution does not become operational learner runtime",
+    "no learner, participant, client, commercial or restricted source data is copied by the projection"
+  ],
+  "claimBoundary": "TEST_EVIDENCE_ONLY_NOT_PUBLIC_USER_RUNTIME_NOT_ACCESSIBILITY_CONFORMANCE_NOT_LEARNING_SYSTEM_VERSION_PROOF_NOT_SOURCE_AUTHORITY_TRANSFER",
+  "machineMaturity": {
+    "repositoryDeclaredTarget": 4,
+    "observedSubcapability": 5,
+    "movement": "PUBLIC_LEARNING_CAPABILITY_CONSUMER_BINDING_M4_TO_M5",
+    "runtimeEvidence": "NONE"
+  },
+  "nextSourceAction": "Use the source-bound capability projection in an attributable public navigation request or rendering event, then capture bounded runtime observation before any M6 claim. Reconcile the projection on a material upstream capability version, evidence-state or source-authority change."
+}
