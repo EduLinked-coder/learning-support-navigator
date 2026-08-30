@@ -3,7 +3,7 @@
   "sourceRevision": "546aa84ccf621bf024db64f6922ccaa29c8914f9",
   "sourceType": "approved_public_source",
   "sourcePath": "evidence/accessflow-v1.2.0-runtime-evidence-index.yml",
-  "projectionVersion": "1.0.0",
+  "projectionVersion": "1.0.1",
   "classification": "public_approved",
   "approvalEvidence": "Source repository and cited capability evidence are already publicly published; this projection adds no private learner, client, commercial or restricted content.",
   "preparedAt": "2026-08-30T15:05:00Z",
@@ -33,10 +33,10 @@
       {
         "id": "evidencepath",
         "canonicalOwner": "EduLinked-Pty-Ltd/accessible-RTO",
-        "version": "1.2.0",
-        "evidenceState": "SOURCE_AND_TEST_EVIDENCED_COMPATIBILITY",
-        "sourceRef": "evidence/evidencepath-v1.2.0-ilb-v1.5.0-requalification-receipt.yml",
-        "claimCeiling": "Compatibility with Inclusive Learning Builder 1.5.0 is requalified; competency or RPL is not granted."
+        "version": "1.3.0",
+        "evidenceState": "SOURCE_AND_TEST_EVIDENCED",
+        "sourceRef": "evidence/evidencepath-v1.3.0-release-receipt.yml",
+        "claimCeiling": "Multilingual evidence provenance is source- and test-evidenced; runtime adoption, competency and RPL decisions are not established."
       },
       {
         "id": "universal-learning-design",
