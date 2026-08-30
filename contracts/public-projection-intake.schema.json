@@ -7,6 +7,7 @@
   "required": [
     "sourceRepository",
     "sourceRevision",
+    "sourceType",
     "projectionVersion",
     "classification",
     "approvalEvidence",
@@ -16,11 +17,22 @@
   ],
   "properties": {
     "sourceRepository": {
-      "const": "EduLinked-coder/learning-support-navigator-private"
+      "type": "string",
+      "minLength": 1
     },
     "sourceRevision": {
       "type": "string",
       "minLength": 7
+    },
+    "sourceType": {
+      "enum": [
+        "paired_private_projection",
+        "approved_public_source"
+      ]
+    },
+    "sourcePath": {
+      "type": "string",
+      "minLength": 1
     },
     "projectionVersion": {
       "type": "string",
@@ -44,5 +56,21 @@
     "payload": {
       "type": "object"
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "sourceType": {
+            "const": "approved_public_source"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "sourcePath"
+        ]
+      }
+    }
+  ]
 }
