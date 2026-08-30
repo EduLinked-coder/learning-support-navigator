@@ -1,0 +1,67 @@
+{
+  "sourceRepository": "EduLinked-Pty-Ltd/accessible-RTO",
+  "sourceRevision": "546aa84ccf621bf024db64f6922ccaa29c8914f9",
+  "sourceType": "approved_public_source",
+  "sourcePath": "evidence/accessflow-v1.2.0-runtime-evidence-index.yml",
+  "projectionVersion": "1.0.0",
+  "classification": "public_approved",
+  "approvalEvidence": "Source repository and cited capability evidence are already publicly published; this projection adds no private learner, client, commercial or restricted content.",
+  "preparedAt": "2026-08-30T15:05:00Z",
+  "minimisationStatement": "Only capability identity, current version, bounded evidence state, public source reference and claim ceiling are projected. No participant or learner records are copied.",
+  "payload": {
+    "projectionKind": "edulinked_learning_capability_projection_v1",
+    "consumerRepository": "EduLinked-coder/learning-support-navigator",
+    "sourceAuthorityTransferred": false,
+    "learningSystemImplementationVersion": "UNVERIFIED",
+    "capabilities": [
+      {
+        "id": "inclusive-learning-builder",
+        "canonicalOwner": "EduLinked-Pty-Ltd/accessible-RTO",
+        "version": "1.5.0",
+        "evidenceState": "SOURCE_AND_TEST_EVIDENCED",
+        "sourceRef": "evidence/inclusive-learning-builder-v1.5.0-release-receipt.yml",
+        "claimCeiling": "Released source behaviour and deterministic authoring tests; deployed runtime adoption is not established."
+      },
+      {
+        "id": "accessflow",
+        "canonicalOwner": "EduLinked-Pty-Ltd/accessible-RTO",
+        "version": "1.2.0",
+        "evidenceState": "RUNTIME_PROVEN_BOUNDED",
+        "sourceRef": "evidence/accessflow-v1.2.0-runtime-evidence-index.yml",
+        "claimCeiling": "Bounded multi-consumer runtime evidence exists; accessibility conformance and general cross-environment effectiveness are not established."
+      },
+      {
+        "id": "evidencepath",
+        "canonicalOwner": "EduLinked-Pty-Ltd/accessible-RTO",
+        "version": "1.2.0",
+        "evidenceState": "SOURCE_AND_TEST_EVIDENCED_COMPATIBILITY",
+        "sourceRef": "evidence/evidencepath-v1.2.0-ilb-v1.5.0-requalification-receipt.yml",
+        "claimCeiling": "Compatibility with Inclusive Learning Builder 1.5.0 is requalified; competency or RPL is not granted."
+      },
+      {
+        "id": "universal-learning-design",
+        "canonicalOwner": "EduLinked-coder/universal-learning-design",
+        "version": "0.2.0",
+        "evidenceState": "SOURCE_AUDIT_EXECUTED_TEST_EVIDENCE",
+        "sourceRef": "evidence/training-products/BSBMKG543_R1/universal-learning-design-source-audit-execution-2026-08-30.yml",
+        "claimCeiling": "A source-owned audit executed deterministically; operational learner runtime, accessibility conformance and RTO compliance certification are not established."
+      },
+      {
+        "id": "global-learning-package-portability-profile",
+        "canonicalOwner": "EduLinked-Pty-Ltd/accessible-RTO",
+        "version": "1.0.0",
+        "evidenceState": "CANONICAL_OPTIONAL_PROFILE_SOURCE_EVIDENCED",
+        "sourceRef": "templates/global-learning-package-portability-profile.md",
+        "claimCeiling": "Portability metadata does not establish translation quality, accessibility conformance, qualification equivalence or authorised cross-border delivery."
+      },
+      {
+        "id": "individual-contribution-evidence-profile",
+        "canonicalOwner": "EduLinked-Pty-Ltd/accessible-RTO",
+        "version": "1.1.0",
+        "evidenceState": "SOURCE_EVIDENCED_REAL_CONSUMER_REVIEW_PENDING",
+        "sourceRef": "evidence/individual-contribution-evidence-profile-v1.1.0-release-receipt.yml",
+        "claimCeiling": "The reusable profile and a real consumer binding exist; person review, competency and RPL outcomes are not established by the profile itself."
+      }
+    ]
+  }
+}
