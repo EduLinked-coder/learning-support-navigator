@@ -16,16 +16,25 @@
       "path": "contracts/public-projection-intake.schema.json"
     },
     "learningCapabilityProjection": {
-      "commit": "747ba1e1aa343af0c1ca0b44238ee777d12aeabc",
-      "blobSha": "8a66f44656f135ebe6d22dfd6a4b0550eed61662",
-      "path": "examples/accessible-rto-learning-capability-projection.json"
+      "commit": "64497d319a6b377b73a9c822cfbc6d9dfe1ba306",
+      "blobSha": "3a5d73c5ba81491d1b95b9f27de2ac0fb06f3e47",
+      "path": "examples/accessible-rto-learning-capability-projection.json",
+      "projectionVersion": "1.0.1"
     },
     "validator": {
-      "commit": "dcf15f9290c9e1c98fe999e4fa407e593a98a950",
-      "blobSha": "54b799a44487972eea5042808421478d86dc69d1",
+      "commit": "c845d54e2989dd703e0dcfe0288b4f563ea75b2c",
+      "blobSha": "ed69d65c3742cc54897477093f16ec8fc3ab76e1",
       "path": "scripts/validate_public_boundary.py"
     },
-    "upstreamSourceRevision": "546aa84ccf621bf024db64f6922ccaa29c8914f9"
+    "upstreamSourceRevision": "546aa84ccf621bf024db64f6922ccaa29c8914f9",
+    "evidencePathCurrentReleaseEvidence": "EduLinked-Pty-Ltd/accessible-RTO:evidence/evidencepath-v1.3.0-release-receipt.yml"
+  },
+  "repair": {
+    "trigger": "independent current-source inspection found EvidencePath v1.3.0 had superseded the earlier v1.2.0 compatibility state",
+    "staleProjectionState": "EvidencePath 1.2.0",
+    "repairedProjectionState": "EvidencePath 1.3.0",
+    "staleStatePromoted": false,
+    "repairReverified": true
   },
   "execution": {
     "mode": "LOCAL_DETERMINISTIC_SOURCE_MATERIALISED",
@@ -33,7 +42,7 @@
     "pythonCompile": "PASS",
     "validatorResult": "PASS",
     "positiveProjectionIntakePaths": 2,
-    "negativeFailClosedCases": 9,
+    "negativeFailClosedCases": 10,
     "negativeCases": [
       "private_classification_rejected",
       "company_confidential_classification_rejected",
@@ -43,7 +52,8 @@
       "approved_public_source_without_source_path_rejected",
       "invented_learning_system_version_rejected",
       "source_authority_transfer_rejected",
-      "accessflow_accessibility_conformance_overclaim_rejected"
+      "accessflow_accessibility_conformance_overclaim_rejected",
+      "stale_evidencepath_v1_2_0_rejected"
     ],
     "githubActionsDispatched": 0,
     "githubActionsMinutesConsumed": 0
@@ -54,7 +64,8 @@
     "public-source projections require source revision, source path, approval evidence and minimisation statement",
     "source authority is not transferred to the public navigator",
     "Learning System implementation version remains UNVERIFIED",
-    "current evidenced versions are preserved for Inclusive Learning Builder, AccessFlow, EvidencePath, Universal Learning Design, Global Learning Package Portability Profile and Individual Contribution Evidence Profile",
+    "current evidenced versions are preserved for Inclusive Learning Builder 1.5.0, AccessFlow 1.2.0, EvidencePath 1.3.0, Universal Learning Design 0.2.0, Global Learning Package Portability Profile 1.0.0 and Individual Contribution Evidence Profile 1.1.0",
+    "stale EvidencePath 1.2.0 projections fail closed after current source proves 1.3.0",
     "AccessFlow bounded runtime evidence does not become accessibility-conformance evidence",
     "Universal Learning Design source-audit execution does not become operational learner runtime",
     "no learner, participant, client, commercial or restricted source data is copied by the projection"
