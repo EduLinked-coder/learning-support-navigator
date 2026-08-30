@@ -143,8 +143,11 @@ def validate_learning_capability_projection(obj: dict) -> list[str]:
         errors.append("Inclusive Learning Builder public projection must use current evidenced version 1.5.0")
 
     evidencepath = by_id.get("evidencepath", {})
-    if evidencepath and evidencepath.get("version") != "1.2.0":
-        errors.append("EvidencePath public projection must use current evidenced version 1.2.0")
+    if evidencepath:
+        if evidencepath.get("version") != "1.3.0":
+            errors.append("EvidencePath public projection must use current evidenced version 1.3.0")
+        if evidencepath.get("sourceRef") != "evidence/evidencepath-v1.3.0-release-receipt.yml":
+            errors.append("EvidencePath public projection must reference the current v1.3.0 release receipt")
 
     uld = by_id.get("universal-learning-design", {})
     if uld:
@@ -280,6 +283,14 @@ def main() -> int:
             capability["claimCeiling"] = "Accessibility conformance established."
     if not validate_learning_capability_projection(accessflow_overclaim):
         errors.append("negative test failed: AccessFlow accessibility-conformance overclaim was accepted")
+
+    stale_evidencepath = copy.deepcopy(public_valid)
+    for capability in stale_evidencepath["payload"]["capabilities"]:
+        if capability.get("id") == "evidencepath":
+            capability["version"] = "1.2.0"
+            capability["sourceRef"] = "evidence/evidencepath-v1.2.0-ilb-v1.5.0-requalification-receipt.yml"
+    if not validate_learning_capability_projection(stale_evidencepath):
+        errors.append("negative test failed: stale EvidencePath v1.2.0 projection was accepted")
 
     if errors:
         for error in errors:
