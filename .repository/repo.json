@@ -11,6 +11,20 @@
     "visibility": "public",
     "purpose": "Provide independently useful public learning-navigation guidance, examples and interfaces without exposing private EduLinked company or product state.",
     "pairedPrivateRepository": "EduLinked-coder/learning-support-navigator-private",
+    "pairedPrivateRole": "source_owner_for_non_public_product_operating_research_commercial_and_proprietary_material",
+    "publicationBinding": {
+      "sourceRepository": "EduLinked-coder/learning-support-navigator-private",
+      "consumerRepository": "EduLinked-coder/learning-support-navigator",
+      "consumerRole": "thin_public_consumer",
+      "transition": "explicit_governed_private_to_public_projection",
+      "publicationApprovalRequired": true,
+      "sourceAuthorityTransfersOnPublication": false,
+      "invariants": [
+        "PRIVATE_SOURCE_EXISTS != PUBLICATION_APPROVED",
+        "PRIVATE_FACT != PUBLIC_FACT",
+        "DERIVED_PUBLIC_PROJECTION != SOURCE_AUTHORITY_TRANSFER"
+      ]
+    },
     "owns": [
       "public_learning_navigation_content",
       "public_navigation_examples",
