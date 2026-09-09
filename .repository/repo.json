@@ -26,11 +26,31 @@
       },
       "publicationApprovalRequired": true,
       "sourceAuthorityTransfersOnPublication": false,
+      "humanFacingProjection": {
+        "currentRepositorySurface": "https://github.com/EduLinked-coder/learning-support-navigator",
+        "currentRepositorySurfaceRole": "public_repository_documentation_and_thin_consumer",
+        "dedicatedEndUserSurface": null,
+        "dedicatedEndUserSurfaceState": "not_established",
+        "repositoryMetadataEvidence": {
+          "githubPagesEnabled": false,
+          "repositoryHomepage": null,
+          "observedAt": "2026-09-10"
+        },
+        "consumerMustRemainThin": true,
+        "sourceAuthorityTransfersOnProjection": false,
+        "continuation": {
+          "trigger": "source-owned evidence names an approved dedicated human-facing publication destination",
+          "action": "bind the exact destination as a thin projection without moving private material or source authority"
+        }
+      },
       "invariants": [
         "PRIVATE_SOURCE_EXISTS != PUBLICATION_APPROVED",
         "PRIVATE_FACT != PUBLIC_FACT",
         "APPROVED_PUBLIC_SOURCE != PAIRED_PRIVATE_SOURCE",
-        "DERIVED_PUBLIC_PROJECTION != SOURCE_AUTHORITY_TRANSFER"
+        "DERIVED_PUBLIC_PROJECTION != SOURCE_AUTHORITY_TRANSFER",
+        "PUBLIC_REPOSITORY_VISIBILITY != DEDICATED_END_USER_PUBLICATION_SURFACE",
+        "PUBLIC_THIN_CONSUMER != SOURCE_AUTHORITY",
+        "REPOSITORY_RENDERING != PUBLICATION_APPROVAL"
       ]
     },
     "owns": [
