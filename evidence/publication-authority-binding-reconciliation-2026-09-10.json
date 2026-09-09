@@ -1,0 +1,55 @@
+{
+  "receiptType": "publication_authority_binding_reconciliation",
+  "date": "2026-09-10",
+  "scope": "Learning Support Navigator public thin-consumer and human-facing projection boundary only",
+  "inspected": [
+    "EduLinked-Systems/canonical-repository-ecosystem-registry/registry/edulinked-coder.md",
+    "EduLinked-coder/learning-support-navigator/README.md",
+    "EduLinked-coder/learning-support-navigator/.repository/repo.json",
+    "EduLinked-coder/learning-support-navigator-private/README.md",
+    "EduLinked-coder/learning-support-navigator-private/.repository/repo.yaml",
+    "GitHub repository metadata for EduLinked-coder/learning-support-navigator"
+  ],
+  "changed": {
+    "repository": "EduLinked-coder/learning-support-navigator",
+    "path": ".repository/repo.json",
+    "change": "Bound the current evidenced human-readable surface to the public GitHub repository as a thin consumer/documentation projection while preserving the dedicated end-user publication surface as not established.",
+    "commit": "84b1632704fe258dea59a93c724fd5e81e5b3498"
+  },
+  "sourceAuthority": {
+    "pairedPrivateSourceOwner": "EduLinked-coder/learning-support-navigator-private for non-public product, operating, research, commercial and proprietary material",
+    "publicConsumer": "EduLinked-coder/learning-support-navigator",
+    "publicConsumerRole": "thin_public_consumer",
+    "approvedPublicSourceAuthority": "remains with each allowlisted source repository",
+    "authorityTransferredByProjection": false
+  },
+  "publicationOrConsumerBinding": {
+    "currentRepositorySurface": "https://github.com/EduLinked-coder/learning-support-navigator",
+    "currentRepositorySurfaceRole": "public_repository_documentation_and_thin_consumer",
+    "dedicatedEndUserSurface": null,
+    "dedicatedEndUserSurfaceState": "not_established",
+    "githubPagesEnabledAtObservation": false,
+    "repositoryHomepageAtObservation": null
+  },
+  "validation": {
+    "updatedBindingReread": true,
+    "publicBoundaryWorkflowRun": 34375794109,
+    "publicBoundaryWorkflowResult": "success",
+    "canonicalRegistryChangeRequired": false
+  },
+  "remainingUncertainty": [
+    "No inspected source-owned evidence names an approved dedicated end-user publication URL, site or application surface.",
+    "GitHub Pages being disabled and repository homepage being unset do not prove that no external presentation surface can exist; a future surface must be bound from attributable source-owned evidence before machines treat it as approved."
+  ],
+  "continuation": {
+    "trigger": "source-owned evidence names an approved dedicated human-facing publication destination",
+    "action": "bind the exact destination as a thin projection without moving private material or source authority"
+  },
+  "guards": [
+    "PUBLIC_REPOSITORY_VISIBILITY != DEDICATED_END_USER_PUBLICATION_SURFACE",
+    "PUBLIC_THIN_CONSUMER != SOURCE_AUTHORITY",
+    "REPOSITORY_RENDERING != PUBLICATION_APPROVAL",
+    "PRIVATE_SOURCE_EXISTS != PUBLICATION_APPROVED",
+    "PROJECTION != SOURCE_AUTHORITY_TRANSFER"
+  ]
+}
