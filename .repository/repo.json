@@ -14,14 +14,22 @@
     "pairedPrivateRole": "source_owner_for_non_public_product_operating_research_commercial_and_proprietary_material",
     "publicationBinding": {
       "sourceRepository": "EduLinked-coder/learning-support-navigator-private",
+      "sourceRepositoryScope": "paired_private_projection_only",
       "consumerRepository": "EduLinked-coder/learning-support-navigator",
       "consumerRole": "thin_public_consumer",
-      "transition": "explicit_governed_private_to_public_projection",
+      "transition": "explicit_governed_projection_intake_by_source_type",
+      "approvedPublicSourceRoute": {
+        "sourceType": "approved_public_source",
+        "allowlistRef": "spec.informationClassification.approvedPublicSourceRepositories",
+        "sourceAuthority": "remains_with_source_repository",
+        "projectionApprovalEvidenceRequired": true
+      },
       "publicationApprovalRequired": true,
       "sourceAuthorityTransfersOnPublication": false,
       "invariants": [
         "PRIVATE_SOURCE_EXISTS != PUBLICATION_APPROVED",
         "PRIVATE_FACT != PUBLIC_FACT",
+        "APPROVED_PUBLIC_SOURCE != PAIRED_PRIVATE_SOURCE",
         "DERIVED_PUBLIC_PROJECTION != SOURCE_AUTHORITY_TRANSFER"
       ]
     },
